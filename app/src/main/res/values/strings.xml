@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FirstTestVKProject</string>
+    <string name="Enter_id_GIPHY" >Введите id гифки!</string>
+    <string name="search">Найти!</string>
+    <string name="your_records">Ваши записи:</string>
+    <string name="no_records">У вас пока нет записей</string>
+    <string name="Enter_record_name">Придумайте название записи:</string>
+    <string name="name">название</string>
+    <string name="date">дата</string>
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_your_records"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_records"
+        android:textSize="37sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingBottom="13dp"
+        android:layout_marginStart="8dp"
+        />
+
+    <TextView
+        android:id="@+id/no_recordings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_records"
+        android:layout_below="@+id/tv_your_records"
+        android:textSize="25sp"
+        android:layout_marginStart="10dp"
+        android:visibility="gone"
+        />
+
+
+<!--    <ScrollView-->
+<!--        android:id="@+id/sv_records_list"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@+id/tv_your_records"-->
+<!--        >-->
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/tv_your_records"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        />
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/ib_play_music_button"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:layout_marginTop="14dp"-->
+<!--                android:layout_marginStart="350dp"-->
+<!--                android:background="@drawable/roundedbutton"-->
+<!--                android:gravity="center"-->
+<!--                android:maxWidth="5dp"-->
+<!--                android:maxHeight="5dp"-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:src="@drawable/play_music_button"-->
+<!--                android:visibility="visible"-->
+<!--                />-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/ib_pause_music_button"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_marginTop="14dp"-->
+<!--                    android:layout_marginStart="350dp"-->
+<!--                    android:background="@drawable/roundedbutton"-->
+<!--                    android:gravity="center"-->
+<!--                    android:maxWidth="5dp"-->
+<!--                    android:maxHeight="5dp"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/pause_music_button"-->
+<!--                    android:visibility="gone"-->
+<!--                    />-->
+
+
+
+<!--    </ScrollView>-->
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingTop="620dp"
+    >
+
+
+    <ImageButton
+        android:id="@+id/ib_microphone_record_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/roundedbutton_blue_color"
+        android:gravity="center"
+        android:padding="10dp"
+        android:maxWidth="5dp"
+        android:maxHeight="5dp"
+        android:scaleType="fitXY"
+        android:onClick="recordStart"
+        android:src="@drawable/microphone_record_button"
+        android:visibility="visible"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_microphone_stop_record_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/roundedbutton_blue_color"
+        android:gravity="center"
+        android:padding="10dp"
+        android:maxWidth="5dp"
+        android:maxHeight="5dp"
+        android:scaleType="fitXY"
+        android:onClick="recordStop"
+        android:src="@drawable/microphone_stop_record_button"
+        android:visibility="gone"
+        />
+</LinearLayout>
+
+
+</RelativeLayout>
